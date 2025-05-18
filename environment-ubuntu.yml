@@ -1,0 +1,25 @@
+name: htracking
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.10
+  - pytorch=2.2.0
+  - torchvision=0.17.0
+  - torchaudio=2.2.0
+  - pytorch-cuda=12.1          # Enable CUDA acceleration
+  - ultralytics>=8.2           # YOLOv8 wrapper
+  - opencv                     # Image I/O and visualisation
+  - ffmpeg                     # Video decoding
+  - mplsoccer                  # Pitch plotting library
+  - streamlit                  # Dashboard front-end
+  - pip
+  - pip:
+      - numpy<2.0              # Ensures compatibility with PyTorch/ByteTrack
+      - loguru                 # Required by ByteTrack utils
+      - tracklab               # Modular tracking interface
+      - kloppy                 # Match data loader for events/tracking
+      - ByteTrack
+      - SoccerNet
+ 
